@@ -21,10 +21,8 @@ country_list <- function() {
 # year --------------------------------------------------------------------
 
 #' Get a list of available year for the country specified
-#'
+#' @param country A character of country name
 #' @export
-`%>%` <- dplyr::`%>%`
-
 year_list <- function(country = NULL) {
   if (is.null(country)) {
     stop("Country input are required")

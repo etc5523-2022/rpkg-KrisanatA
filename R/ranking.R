@@ -1,8 +1,5 @@
 #'
 #' @export
-
-`%>%` <- dplyr::`%>%`
-
 ranking <- function(country = NULL, year = NULL) {
   if (is.null(country) | is.null(year)) {
     stop("The country and year input are required for this function.")
