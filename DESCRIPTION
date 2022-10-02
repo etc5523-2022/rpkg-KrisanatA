@@ -1,11 +1,16 @@
-Package: change-this-to-your-pkg-name
-Title: What the Package Does (One Line, Title Case)
+Package: dislib
+Title: Give insight about the diseases
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "your@email.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("Krisanat", "Anukarnsakulchularp", , "kanu0003@student.monash.edu", role = c("aut", "cre"))
+Description: This package contains a data set and function to provide information on diseases and mortality rates.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Language: es
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
+Depends: 
+    R (>= 2.10)
+LazyData: true
+URL: https://github.com/etc5523-2022/rpkg-KrisanatA
+BugReports: https://github.com/etc5523-2022/rpkg-KrisanatA/issues
