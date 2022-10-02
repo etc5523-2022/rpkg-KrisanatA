@@ -1,2 +1,3 @@
-^yourpkg\.Rproj$
+^dislib\.Rproj$
 ^\.Rproj\.user$
+^LICENSE\.md$
