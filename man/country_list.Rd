@@ -2,10 +2,10 @@
 % Please edit documentation in R/list.R
 \name{country_list}
 \alias{country_list}
-\title{Get a list of available country}
+\title{Country list}
 \usage{
 country_list()
 }
 \description{
-Get a list of available country
+Get a list of available country name.
 }

@@ -2,10 +2,10 @@
 % Please edit documentation in R/list.R
 \name{disease_list}
 \alias{disease_list}
-\title{Get a list of available disease}
+\title{Disease list}
 \usage{
 disease_list()
 }
 \description{
-Get a list of available disease
+Get a list of available disease name.
 }

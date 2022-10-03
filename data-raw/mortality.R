@@ -71,12 +71,12 @@ mortality <- data %>%
                values_to = "mortality_rate") %>%
   # Clean Disease name
   mutate(disease = str_replace_all(disease, c("Deaths - " = "", " - Sex: Both - Age: All Ages \\(Percent\\)" = "")),
-         `mortality_rate` = round(`mortality_rate`, 4)) %>%
+         mortality_rate = round(mortality_rate, 4)) %>%
   # Rename column
   rename(country = entity,
          continent = region) %>%
   # Relocate the column
-  relocate(c(continent, year, disease, `mortality_rate`),
+  relocate(c(continent, year, disease, mortality_rate),
            .after = c(code, continent, year, disease))
 
 
