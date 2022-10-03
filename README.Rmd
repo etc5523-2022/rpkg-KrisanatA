@@ -1,0 +1,50 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# dislib
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+<!-- badges: end -->
+
+"dislib" or disease library is a package to provide information about the diseases and its mortality rate. The original data are from [Our world in Data](https://ourworldindata.org/what-does-the-world-die-from).
+
+## Installation
+
+You can install the development version of dislib from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("etc5523-2022/rpkg-KrisanatA")
+```
+
+## Example
+
+```{r example}
+library(dislib)
+```
+
+The mortality rate overtime for Cardiovascular diseases in Australia:
+
+```{r}
+plot_dis("Cardiovascular diseases", "Australia")
+```
+
+What diseases has the highest mortality rate in Australia for 2019:
+
+```{r}
+dis_summary("Australia", 2019)
+```
+

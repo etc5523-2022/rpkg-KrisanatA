@@ -6,7 +6,7 @@
 #' @param disease A character of disease name you want to see. See a full list of disease by `disease_list()`.
 #' @param country A character of country name you want to learn. See a full list of country by `country_list()`.
 #'
-#' @return Return a `plotly` object.
+#' @return Return a `ggplot` object.
 #'
 #' @examples
 #' plot_dis(disease = "Cardiovascular diseases", country = "Australia")
@@ -29,15 +29,14 @@ plot_dis <- function(disease = NULL, country = NULL) {
   else {
     mortality_rate <- year <- NULL
 
-    plotly::ggplotly(dislib::mortality %>%
-                       dplyr::filter(.data$country == {{country}},
-                                     .data$disease == {{disease}}) %>%
-                       ggplot2::ggplot(ggplot2::aes(x = year, y = `mortality_rate`)) +
-                       ggplot2::geom_line(color = "red") +
-                       ggplot2::geom_point(color = "red") +
-                       ggplot2::theme_bw() +
-                       ggplot2::labs(x = "Year", y = "Mortality Rate (Percentage)") +
-                       ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 50, vjust = 1, hjust = 1))
-                     )
+    dislib::mortality %>%
+      dplyr::filter(.data$country == {{country}},
+                    .data$disease == {{disease}}) %>%
+      ggplot2::ggplot(ggplot2::aes(x = year, y = `mortality_rate`)) +
+      ggplot2::geom_line(color = "red") +
+      ggplot2::geom_point(color = "red") +
+      ggplot2::theme_bw() +
+      ggplot2::labs(x = "Year", y = "Mortality Rate (Percentage)") +
+     ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 50, vjust = 1, hjust = 1))
   }
 }
