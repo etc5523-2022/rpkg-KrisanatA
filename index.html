@@ -69,7 +69,8 @@
 <div class="page-header"><h1 id="dislib">dislib<a class="anchor" aria-label="anchor" href="#dislib"></a>
 </h1></div>
 <!-- badges: start -->
-<p>“dislib” or disease library is a package to provide information about the diseases and its mortality rate. The original data are from <a href="https://ourworldindata.org/what-does-the-world-die-from" class="external-link">Our world in Data</a>.</p>
+<p>“dislib” or disease library is a package to provide information about the diseases and their mortality rate. The original data are from <a href="https://ourworldindata.org/what-does-the-world-die-from" class="external-link">Our world in Data</a>.</p>
+<p>You can access the package website through this <a href="https://etc5523-2022.github.io/rpkg-KrisanatA/">link</a></p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -79,17 +80,23 @@
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"etc5523-2022/rpkg-KrisanatA"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+<h2 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
 </h2>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/etc5523-2022/rpkg-KrisanatA" class="external-link">dislib</a></span><span class="op">)</span></span></code></pre></div>
-<p>The mortality rate overtime for Cardiovascular diseases in Australia:</p>
+<div class="section level3">
+<h3 id="the-mortality-rate-overtime-for-cardiovascular-diseases-in-australia">The mortality rate overtime for Cardiovascular diseases in Australia:<a class="anchor" aria-label="anchor" href="#the-mortality-rate-overtime-for-cardiovascular-diseases-in-australia"></a>
+</h3>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/plot_dis.html">plot_dis</a></span><span class="op">(</span><span class="st">"Cardiovascular diseases"</span>, <span class="st">"Australia"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/plot_dis.html">plot_dis</a></span><span class="op">(</span>disease <span class="op">=</span> <span class="st">"Cardiovascular diseases"</span>, country <span class="op">=</span> <span class="st">"Australia"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-2-1.png" width="100%"></p>
-<p>What diseases has the highest mortality rate in Australia for 2019:</p>
+<p>To examine how the mortality rate has evolved over time for the country and years are chosen.</p>
+</div>
+<div class="section level3">
+<h3 id="what-diseases-have-the-highest-mortality-rate-in-australia-for-2019">What diseases have the highest mortality rate in Australia for 2019:<a class="anchor" aria-label="anchor" href="#what-diseases-have-the-highest-mortality-rate-in-australia-for-2019"></a>
+</h3>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/dis_summary.html">dis_summary</a></span><span class="op">(</span><span class="st">"Australia"</span>, <span class="fl">2019</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/dis_summary.html">dis_summary</a></span><span class="op">(</span>country <span class="op">=</span> <span class="st">"Australia"</span>, year <span class="op">=</span> <span class="fl">2019</span><span class="op">)</span></span>
 <span><span class="co">#&gt; # A tibble: 10 × 3</span></span>
 <span><span class="co">#&gt;     Rank disease                                    Mortality_rate</span></span>
 <span><span class="co">#&gt;    &lt;dbl&gt; &lt;chr&gt;                                               &lt;dbl&gt;</span></span>
@@ -103,6 +110,14 @@
 <span><span class="co">#&gt;  8     8 Diabetes mellitus                                    2.48</span></span>
 <span><span class="co">#&gt;  9     9 Parkinson's disease                                  1.41</span></span>
 <span><span class="co">#&gt; 10    10 Cirrhosis and other chronic liver diseases           1.30</span></span></code></pre></div>
+<p>This function allows users to see the top 10 highest mortality rates for the country and year chosen.</p>
+</div>
+<div class="section level3">
+<h3 id="launching-shiny-app">Launching shiny app:<a class="anchor" aria-label="anchor" href="#launching-shiny-app"></a>
+</h3>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/run_app.html">run_app</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+</div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">

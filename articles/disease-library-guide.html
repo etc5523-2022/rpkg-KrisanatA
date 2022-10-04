@@ -109,16 +109,16 @@
 <span><span class="co">#&gt; 8          8.5724</span></span>
 <span><span class="co">#&gt; 9          2.3307</span></span>
 <span><span class="co">#&gt; 10         1.4661</span></span></code></pre></div>
-<p>The <code>mortality</code> data set contains information about the mortality rate across diseases and by countries from 1990 to 2019. The variables provided in this dataset are the following</p>
+<p>The <code>mortality</code> data set contains information about the mortality rate across diseases and countries from 1990 to 2019. The variables provided in this dataset are the following</p>
 <ul>
 <li><p><code>country</code>: Country name</p></li>
 <li><p><code>code</code>: Country code (Alpha-3 code)</p></li>
-<li><p><code>continent</code>: Continent of each country</p></li>
+<li><p><code>continent</code>: The continent of each country</p></li>
 <li><p><code>year</code>: Year</p></li>
 <li><p><code>disease</code>: Disease name</p></li>
 <li><p><code>mortality_rate</code>: Mortality rate in percentage</p></li>
 </ul>
-<p>Since not all the country, year, and disease information available. This package has provided the function to see the what is available in the dataset. We can do this using <code><a href="../reference/country_list.html">country_list()</a></code>, <code><a href="../reference/year_list.html">year_list()</a></code>, <code>disease_list</code></p>
+<p>Since not all the country, year, and disease information is available. This package has provided the function to see what is available in the dataset. We can do this using <code><a href="../reference/country_list.html">country_list()</a></code>, <code><a href="../reference/year_list.html">year_list()</a></code>, <code>disease_list</code></p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/country_list.html">country_list</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt;   [1] "Afghanistan"                      "Albania"                         </span></span>
@@ -246,7 +246,7 @@
 <span><span class="co">#&gt; [19] "Meningitis"                                </span></span>
 <span><span class="co">#&gt; [20] "Protein-energy malnutrition"               </span></span>
 <span><span class="co">#&gt; [21] "Enteric infections"</span></span></code></pre></div>
-<p>For the <code><a href="../reference/year_list.html">year_list()</a></code> function, you need to provided the country to see the year available.</p>
+<p>For the <code><a href="../reference/year_list.html">year_list()</a></code> function, you need to provide the country to see the year available.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/year_list.html">year_list</a></span><span class="op">(</span><span class="st">"Australia"</span><span class="op">)</span></span>
 <span><span class="co">#&gt;  [1] 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004</span></span>
@@ -258,7 +258,7 @@
 <div class="section level3">
 <h3 id="top-10-higest-mortality-rate-in-the-australia-for-2019">Top 10 higest mortality rate in the Australia for 2019<a class="anchor" aria-label="anchor" href="#top-10-higest-mortality-rate-in-the-australia-for-2019"></a>
 </h3>
-<p>There are two main types of disease, Non-communicable and Communicable diseases. Non-communicable diseases (NCDs) it is a disease that can not be passed on from person to person, while communicable diseases can spread from person to person. Now let’s see the types of diseases in 2019 that are the most deadly in the world. We will have a look at top ten diseases in Australia for 2019 using the function <code><a href="../reference/dis_summary.html">dis_summary()</a></code></p>
+<p>There are two main types of disease, Non-communicable and Communicable diseases. Non-communicable diseases (NCDs) it is a diseases that can not be passed on from person to person, while communicable diseases can spread from person to person. Now let’s see the types of diseases in 2019 that are the most deadly in the world. We will have a look at the top ten diseases in Australia for 2019 using the function <code><a href="../reference/dis_summary.html">dis_summary()</a></code>.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/dis_summary.html">dis_summary</a></span><span class="op">(</span><span class="st">"Australia"</span>, <span class="fl">2019</span><span class="op">)</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 10 × 3</span></span></span>
@@ -274,16 +274,16 @@
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>     8 Diabetes mellitus                                    2.48</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>     9 Parkinson's disease                                  1.41</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>    10 Cirrhosis and other chronic liver diseases           1.30</span></span></code></pre></div>
-<p>From this dataframe, we can see that the diseases that has highest mortality rate in Australia is Neoplasms, then Cardiovascular diseases. These two diseases are the NCD, it shows that the impact of NCDs is larger than how it is currently portrayed in society nowadays.</p>
+<p>From this data frame, we can see that the diseases which have the highest mortality rate in Australia are Neoplasms, then Cardiovascular diseases. These two diseases are the NCDs, which shows that the impact of NCDs is larger than how it is currently portrayed in society nowadays.</p>
 </div>
 <div class="section level3">
 <h3 id="impact-of-the-neoplasms-diseases-overtime-in-australia">Impact of the Neoplasms diseases overtime in Australia<a class="anchor" aria-label="anchor" href="#impact-of-the-neoplasms-diseases-overtime-in-australia"></a>
 </h3>
-<p>We can further analyze the impact of the Neoplasms disease overtime using the function <code><a href="../reference/plot_dis.html">plot_dis()</a></code>.</p>
+<p>We can further analyze the impact of the Neoplasms disease over time using the function <code><a href="../reference/plot_dis.html">plot_dis()</a></code>.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_dis.html">plot_dis</a></span><span class="op">(</span><span class="st">"Neoplasms"</span>, <span class="st">"Australia"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="disease-library-guide_files/figure-html/unnamed-chunk-7-1.png" width="700"></p>
-<p>We can see that the trends are increase over time, which is very concerning as this shows that there is not enough effort put into developing the treatment needed for this diseases.</p>
+<p>We can see that the trends are increasing over time, which is very concerning as this shows that there is not enough effort put into developing the treatment needed for this disease.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
