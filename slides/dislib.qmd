@@ -1,0 +1,220 @@
+---
+title: "dislib package"
+format: 
+  revealjs:
+    theme: beige
+editor: visual
+---
+
+```{r, include = FALSE}
+library(dislib)
+library(kableExtra)
+
+knitr::opts_chunk$set(
+  fig.width = 6,
+  fig.height = 4,
+  fig.align = "center",
+  out.width = "100%",
+  warning = FALSE,
+  message = FALSE,
+  cache = FALSE
+)
+```
+
+
+## dislib package
+
+Package to provide information about the diseases and their mortality rate.
+
+<br>
+
+**About the package:** <br>This package contains mortality data from [Our World in Data](https://ourworldindata.org/what-does-the-world-die-from) 
+
+This data include countries, codes, continents, years, diseases, mortality rates info.
+
+<br>
+
+**Author:** Krisanat Anukarnsakulchularp 29803829
+
+
+## dislib package
+
+**Purpose:** 
+
+To provide easier access to the mortality rate data and allow users to analyse the information based on their interest.
+
+<br>**Package Summary:**
+
+-   Dataset
+
+-   3 main functions
+
+-   Information list
+
+
+## Function 1: plot_dis()
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**About:**
+
+The function plot graph in relation to the disease and country input.
+
+This visual aid allows users to examine the change in a more effective way.
+
+
+:::
+
+::: {.column width="50%"}
+
+**Function:**
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: false
+plot_dis(disease = "Cardiovascular Diseases", country = "Australia")
+```
+
+```{r}
+#| echo: false
+plot_dis(disease = "Cardiovascular diseases", country = "Australia")
+```
+
+:::
+
+::::
+
+
+## Function 2: dis_summary() {.scrollable}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**About:**
+
+The function showcase the mortality rate ranking for each country and year.
+
+:::
+
+::: {.column width="50%"}
+
+In contrast to *plot_dis()* function, *dis_summary()* focuses on individual element.
+
+:::
+
+::::
+
+**Function:**
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: false
+dis_summary(country = "Australia", year = 2019)
+```
+
+```{r}
+#| echo: false
+dis_summary(country = "Australia", year = 2019)
+```
+
+
+## Function 3: run_app()
+
+**About:**
+
+The function is created to launch app.
+
+This act like shorcut to the interactive app for the users
+
+<br>
+
+**Function:**
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: false
+run_app()
+```
+
+
+## Information list function
+
+With the dislib package, there are limitation to the input.
+
+<br>
+
+The function to help with that are:
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: false
+year_list(country = "Australia")
+```
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: false
+country_list()
+```
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: false
+disease_list()
+```
+
+<br>
+
+As the package contain certain years, countries, and diseases.
+
+
+## dislib package
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+**Data:** *mortality* data
+
+<br>
+
+**Function:**
+
+-   plot_dis()
+
+-   dis_summary()
+
+-   run_app()
+
+:::
+
+::: {.column width="50%"}
+
+<br>
+
+<br>
+
+<br>
+
+-   year_list()
+
+-   country_list()
+
+-   disease_list()
+
+:::
+
+::::
+
+
+
+
+
+
