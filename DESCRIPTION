@@ -6,7 +6,8 @@ Authors@R:
 Description: This package contains a data set and function to provide
     information on mortality rate for each diseases.
 License: MIT + file LICENSE
-URL: https://github.com/etc5523-2022/rpkg-KrisanatA
+URL: https://github.com/etc5523-2022/rpkg-KrisanatA,
+    https://etc5523-2022.github.io/rpkg-KrisanatA/
 BugReports: https://github.com/etc5523-2022/rpkg-KrisanatA/issues
 Depends: 
     R (>= 2.10)
@@ -14,7 +15,6 @@ Imports:
     dplyr,
     ggplot2,
     magrittr,
-    plotly,
     rlang,
     shiny,
     utils

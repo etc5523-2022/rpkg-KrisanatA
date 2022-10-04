@@ -12,7 +12,7 @@ plot_dis(disease = NULL, country = NULL)
 \item{country}{A character of country name you want to learn. See a full list of country by \code{country_list()}.}
 }
 \value{
-Return a \code{plotly} object.
+Return a \code{ggplot} object.
 }
 \description{
 This function plot the mortality rate overtime for the disease and country chosen.

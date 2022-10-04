@@ -14,6 +14,73 @@ knitr::opts_chunk$set(
 )
 ```
 
+This data set is from [Our World in Data](https://ourworldindata.org/causes-of-death) and [here](https://raw.githubusercontent.com/lukes/ISO-3166-Countries-with-Regional-Codes/master/all/all.csv). It contained the mortality rate of various existing diseases for each country around the world and each year.
+
+This vignette shows you how you can make used of the dataset provided by the packages and use the function provided in the dataset to discover an interesting facts.
+
+Load the `dislib` package using the `library()` function.
+
 ```{r setup}
 library(dislib)
 ```
+
+
+# Data description
+
+```{r}
+mortality[1:10,]
+```
+
+The `mortality` data set contains information about the mortality rate across diseases and by countries from 1990 to 2019. The variables provided in this dataset are the following
+
+- `country`: Country name
+
+- `code`: Country code (Alpha-3 code)
+
+- `continent`: Continent of each country
+
+- `year`: Year
+
+- `disease`: Disease name
+
+- `mortality_rate`: Mortality rate in percentage
+
+Since not all the country, year, and disease information available. This package has provided the function to see the what is available in the dataset. We can do this using `country_list()`, `year_list()`, `disease_list`
+
+```{r}
+country_list()
+```
+
+```{r}
+disease_list()
+```
+
+For the `year_list()` function, you need to provided the country to see the year available.
+
+```{r}
+year_list("Australia")
+```
+
+
+# Examples usage
+
+## Top 10 higest mortality rate in the Australia for 2019
+
+There are two main types of disease, Non-communicable and Communicable diseases. Non-communicable diseases (NCDs) it is a disease that can not be passed on from person to person, while communicable diseases can spread from person to person. Now let’s see the types of diseases in 2019 that are the most deadly in the world. We will have a look at top ten diseases in Australia for 2019 using the function `dis_summary()`
+
+```{r}
+dis_summary("Australia", 2019)
+```
+
+From this dataframe, we can see that the diseases that has highest mortality rate in Australia is Neoplasms, then Cardiovascular diseases. These two diseases are the NCD, it shows that the impact of NCDs is larger than how it is currently portrayed in society nowadays.
+
+
+## Impact of the Neoplasms diseases overtime in Australia
+
+We can further analyze the impact of the Neoplasms disease overtime using the function `plot_dis()`.
+
+```{r}
+plot_dis("Neoplasms", "Australia")
+```
+
+We can see that the trends are increase over time, which is very concerning as this shows that there is not enough effort put into developing the treatment needed for this diseases.
