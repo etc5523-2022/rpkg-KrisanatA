@@ -89,7 +89,7 @@ This visual aid allows users to examine the change in a more effective way.
 #| eval: false
 #| echo: true
 #| code-line-numbers: false
-plot_dis(disease = "Cardiovascular Diseases", country = "Australia")
+plot_dis(disease = "Cardiovascular diseases", country = "Australia")
 ```
 
 ```{r}
