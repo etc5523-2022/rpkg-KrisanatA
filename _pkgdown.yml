@@ -1,4 +1,4 @@
 url: https://etc5523-2022.github.io/rpkg-KrisanatA/
 template:
   bootstrap: 5
-
+  bootswatch: cerulean
