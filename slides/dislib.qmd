@@ -39,6 +39,21 @@ This data include countries, codes, continents, years, diseases, mortality rates
 
 ## dislib package
 
+<br>
+
+**Install package:** These are the step needed to download the package.
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: false
+install.packages("devtools")
+devtools::install_github("etc5523-2022/rpkg-KrisanatA")
+```
+
+
+## dislib package
+
 **Purpose:** 
 
 To provide easier access to the mortality rate data and allow users to analyse the information based on their interest.
