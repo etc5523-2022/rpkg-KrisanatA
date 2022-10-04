@@ -12,6 +12,7 @@ This package contains a data set and function to provide information on mortalit
 Useful links:
 \itemize{
   \item \url{https://github.com/etc5523-2022/rpkg-KrisanatA}
+  \item \url{https://etc5523-2022.github.io/rpkg-KrisanatA/}
   \item Report bugs at \url{https://github.com/etc5523-2022/rpkg-KrisanatA/issues}
 }
 

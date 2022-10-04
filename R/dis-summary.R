@@ -3,10 +3,10 @@
 #' @description Rank the highest mortality rate by disease in a particular country and year.
 #' For a list of available country and year refer back to [country_list()], [year_list()].
 #'
-#' @param country A character of country name you want to learn about the diseases rank. See a full list of country by `country_list()`.
-#' @param year A numeric for a specific year of interest. See a full list of year by `year_list()`.
+#' @param country A character of the country name you want to learn about the disease's rank. See a full list of countries by `country_list()`.
+#' @param year A numeric for a specific year of interest. See a full list of the year by `year_list()`.
 #'
-#' @return A data frame on the top 10 diseases mortality rate from highest to lowest.
+#' @return A data frame on the top 10 diseases ranks by mortality rate from highest to lowest.
 #'
 #' @examples
 #' dis_summary(country = "Australia", year = 2019)
@@ -19,11 +19,11 @@ dis_summary <- function(country = NULL, year = NULL) {
   }
 
   if(!(country %in% dislib::country_list())) {
-    stop("Country name is not known, refer back to country_list() to check the available country information.")
+    stop("The country's name is not known. Refer back to country_list() to check the available country information.")
   }
 
   if(!(year %in% dislib::year_list(country))) {
-    stop("This year is not available, refer back to year_list() to check the available year.")
+    stop("This year is not available. Refer back to year_list() to check the available year.")
   }
 
   else {

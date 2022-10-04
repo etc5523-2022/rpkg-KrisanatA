@@ -19,7 +19,9 @@ knitr::opts_chunk$set(
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-"dislib" or disease library is a package to provide information about the diseases and its mortality rate. The original data are from [Our world in Data](https://ourworldindata.org/what-does-the-world-die-from).
+"dislib" or disease library is a package to provide information about the diseases and their mortality rate. The original data are from [Our world in Data](https://ourworldindata.org/what-does-the-world-die-from).
+
+You can access the package website through this [link](https://etc5523-2022.github.io/rpkg-KrisanatA/)
 
 ## Installation
 
@@ -30,21 +32,31 @@ You can install the development version of dislib from [GitHub](https://github.c
 devtools::install_github("etc5523-2022/rpkg-KrisanatA")
 ```
 
-## Example
+## Examples
 
 ```{r example}
 library(dislib)
 ```
 
-The mortality rate overtime for Cardiovascular diseases in Australia:
+### The mortality rate overtime for Cardiovascular diseases in Australia:
 
 ```{r}
-plot_dis("Cardiovascular diseases", "Australia")
+plot_dis(disease = "Cardiovascular diseases", country = "Australia")
 ```
 
-What diseases has the highest mortality rate in Australia for 2019:
+To examine how the mortality rate has evolved over time for the country and years are chosen.
+
+### What diseases have the highest mortality rate in Australia for 2019:
 
 ```{r}
-dis_summary("Australia", 2019)
+dis_summary(country = "Australia", year = 2019)
+```
+
+This function allows users to see the top 10 highest mortality rates for the country and year chosen.
+
+### Launching shiny app:
+
+```{r, eval = FALSE}
+run_app()
 ```
 

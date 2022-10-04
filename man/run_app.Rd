@@ -10,5 +10,5 @@ run_app()
 Shiny app.
 }
 \description{
-This function is used to called the shiny app that are based on the provided dataset \code{mortality}.
+This function calls the shiny app based on the provided dataset \code{mortality}.
 }

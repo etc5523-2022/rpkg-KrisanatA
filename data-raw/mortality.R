@@ -12,10 +12,10 @@ library(owidR)
 
 # Download data needed ----------------------------------------------------
 
-# Using the owidR package, we can get the data on mortality rate for each causes
+# Using the owidR package, we can get the data on the mortality rate for each cause
 cause_of_death <- owid("share-of-deaths-by-cause")
 
-# url for downloding data on country name and region
+# URL for downloading data on country name and region
 url <- 'https://raw.githubusercontent.com/lukes/ISO-3166-Countries-with-Regional-Codes/master/all/all.csv'
 
 # Read country code and region data

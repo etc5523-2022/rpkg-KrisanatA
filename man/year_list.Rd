@@ -7,13 +7,13 @@
 year_list(country = NULL)
 }
 \arguments{
-\item{country}{A character of country name you want to learn about the diseases rank. See a full list of country by \code{country_list()}.}
+\item{country}{A character of the country name you want to learn about the disease's rank. See a full list of countries by \code{country_list()}.}
 }
 \value{
-A vector of available year data for particular country.
+A vector of available year value for a particular country.
 }
 \description{
-Get a list of available year for the country specified.
+Get a list of the available year for the country specified.
 }
 \examples{
 year_list(country = "Australia")

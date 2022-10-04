@@ -7,12 +7,12 @@
 dis_summary(country = NULL, year = NULL)
 }
 \arguments{
-\item{country}{A character of country name you want to learn about the diseases rank. See a full list of country by \code{country_list()}.}
+\item{country}{A character of the country name you want to learn about the disease's rank. See a full list of countries by \code{country_list()}.}
 
-\item{year}{A numeric for a specific year of interest. See a full list of year by \code{year_list()}.}
+\item{year}{A numeric for a specific year of interest. See a full list of the year by \code{year_list()}.}
 }
 \value{
-A data frame on the top 10 diseases mortality rate from highest to lowest.
+A data frame on the top 10 diseases ranks by mortality rate from highest to lowest.
 }
 \description{
 Rank the highest mortality rate by disease in a particular country and year.

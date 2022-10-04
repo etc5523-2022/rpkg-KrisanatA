@@ -1,10 +1,10 @@
 #' Mortality rate overtime
 #'
-#' @description This function plot the mortality rate overtime for the disease and country chosen.
+#' @description This function plot the mortality rate over time for the disease and country chosen.
 #' For a list of available disease and country refer back to [disease_list()], [country_list()].
 #'
-#' @param disease A character of disease name you want to see. See a full list of disease by `disease_list()`.
-#' @param country A character of country name you want to learn. See a full list of country by `country_list()`.
+#' @param disease A character of disease name you want to see the changes. See a full list of diseases by `disease_list()`.
+#' @param country A character of the country name you want to learn the changes. See a full list of countries by `country_list()`.
 #'
 #' @return Return a `ggplot` object.
 #'
@@ -19,11 +19,11 @@ plot_dis <- function(disease = NULL, country = NULL) {
   }
 
   if(!(disease %in% dislib::disease_list())) {
-    stop("Disease name is not known, refer back to diseases_list() to check the available diseases information.")
+    stop("The disease's name is not known. Refer back to diseases_list() to check the available disease information.")
   }
 
   if(!(country %in% dislib::country_list())) {
-    stop("Country name is not known, refer back to country_list() to check the available country information.")
+    stop("The country's name is not known. Refer back to country_list() to check the available country information.")
   }
 
   else {

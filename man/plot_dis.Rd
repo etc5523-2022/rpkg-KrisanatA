@@ -7,15 +7,15 @@
 plot_dis(disease = NULL, country = NULL)
 }
 \arguments{
-\item{disease}{A character of disease name you want to see. See a full list of disease by \code{disease_list()}.}
+\item{disease}{A character of disease name you want to see the changes. See a full list of diseases by \code{disease_list()}.}
 
-\item{country}{A character of country name you want to learn. See a full list of country by \code{country_list()}.}
+\item{country}{A character of the country name you want to learn the changes. See a full list of countries by \code{country_list()}.}
 }
 \value{
 Return a \code{ggplot} object.
 }
 \description{
-This function plot the mortality rate overtime for the disease and country chosen.
+This function plot the mortality rate over time for the disease and country chosen.
 For a list of available disease and country refer back to \code{\link[=disease_list]{disease_list()}}, \code{\link[=country_list]{country_list()}}.
 }
 \examples{

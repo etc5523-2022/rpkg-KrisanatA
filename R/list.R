@@ -2,7 +2,7 @@
 
 #' Disease list
 #'
-#' @description Get a list of available disease name.
+#' @description Get a list of available disease names.
 #'
 #' @export
 disease_list <- function() {
@@ -26,11 +26,11 @@ country_list <- function() {
 
 #' Year list
 #'
-#' @description Get a list of available year for the country specified.
+#' @description Get a list of the available year for the country specified.
 #'
-#' @param country A character of country name you want to learn about the diseases rank. See a full list of country by `country_list()`.
+#' @param country A character of the country name you want to learn about the disease's rank. See a full list of countries by `country_list()`.
 #'
-#' @return A vector of available year data for particular country.
+#' @return A vector of available year value for a particular country.
 #'
 #' @examples
 #' year_list(country = "Australia")
@@ -39,11 +39,11 @@ country_list <- function() {
 #' @importFrom rlang .data
 year_list <- function(country = NULL) {
   if (is.null(country)) {
-    stop("Country input are required")
+    stop("Country input are required.")
   }
 
   if(!(country %in% dislib::country_list())) {
-    stop("Country name is not known, refer back to country_list() to check the available country information.")
+    stop("The country's name is not known. Refer back to country_list() to check the available country information.")
   }
 
   else {

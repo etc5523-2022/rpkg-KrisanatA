@@ -31,13 +31,13 @@ library(dislib)
 mortality[1:10,]
 ```
 
-The `mortality` data set contains information about the mortality rate across diseases and by countries from 1990 to 2019. The variables provided in this dataset are the following
+The `mortality` data set contains information about the mortality rate across diseases and countries from 1990 to 2019. The variables provided in this dataset are the following
 
 - `country`: Country name
 
 - `code`: Country code (Alpha-3 code)
 
-- `continent`: Continent of each country
+- `continent`: The continent of each country
 
 - `year`: Year
 
@@ -45,7 +45,7 @@ The `mortality` data set contains information about the mortality rate across di
 
 - `mortality_rate`: Mortality rate in percentage
 
-Since not all the country, year, and disease information available. This package has provided the function to see the what is available in the dataset. We can do this using `country_list()`, `year_list()`, `disease_list`
+Since not all the country, year, and disease information is available. This package has provided the function to see what is available in the dataset. We can do this using `country_list()`, `year_list()`, `disease_list`
 
 ```{r}
 country_list()
@@ -55,7 +55,7 @@ country_list()
 disease_list()
 ```
 
-For the `year_list()` function, you need to provided the country to see the year available.
+For the `year_list()` function, you need to provide the country to see the year available.
 
 ```{r}
 year_list("Australia")
@@ -66,21 +66,21 @@ year_list("Australia")
 
 ## Top 10 higest mortality rate in the Australia for 2019
 
-There are two main types of disease, Non-communicable and Communicable diseases. Non-communicable diseases (NCDs) it is a disease that can not be passed on from person to person, while communicable diseases can spread from person to person. Now let’s see the types of diseases in 2019 that are the most deadly in the world. We will have a look at top ten diseases in Australia for 2019 using the function `dis_summary()`
+There are two main types of disease, Non-communicable and Communicable diseases. Non-communicable diseases (NCDs) it is a diseases that can not be passed on from person to person, while communicable diseases can spread from person to person. Now let’s see the types of diseases in 2019 that are the most deadly in the world. We will have a look at the top ten diseases in Australia for 2019 using the function `dis_summary()`.
 
 ```{r}
 dis_summary("Australia", 2019)
 ```
 
-From this dataframe, we can see that the diseases that has highest mortality rate in Australia is Neoplasms, then Cardiovascular diseases. These two diseases are the NCD, it shows that the impact of NCDs is larger than how it is currently portrayed in society nowadays.
+From this data frame, we can see that the diseases which have the highest mortality rate in Australia are Neoplasms, then Cardiovascular diseases. These two diseases are the NCDs, which shows that the impact of NCDs is larger than how it is currently portrayed in society nowadays.
 
 
 ## Impact of the Neoplasms diseases overtime in Australia
 
-We can further analyze the impact of the Neoplasms disease overtime using the function `plot_dis()`.
+We can further analyze the impact of the Neoplasms disease over time using the function `plot_dis()`.
 
 ```{r}
 plot_dis("Neoplasms", "Australia")
 ```
 
-We can see that the trends are increase over time, which is very concerning as this shows that there is not enough effort put into developing the treatment needed for this diseases.
+We can see that the trends are increasing over time, which is very concerning as this shows that there is not enough effort put into developing the treatment needed for this disease.

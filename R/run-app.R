@@ -1,6 +1,6 @@
 #' Launch a shiny app
 #'
-#' @description This function is used to called the shiny app that are based on the provided dataset `mortality`.
+#' @description This function calls the shiny app based on the provided dataset `mortality`.
 #'
 #' @return Shiny app.
 #'

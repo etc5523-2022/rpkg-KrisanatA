@@ -7,5 +7,5 @@
 disease_list()
 }
 \description{
-Get a list of available disease name.
+Get a list of available disease names.
 }
