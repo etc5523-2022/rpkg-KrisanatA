@@ -41,7 +41,7 @@ plot_dis(disease = "Cardiovascular diseases", country = "Australia")
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
 To examine how the mortality rate has evolved over time for the country
-and years are chosen.
+and years chosen.
 
 ### What diseases have the highest mortality rate in Australia for 2019:
 
