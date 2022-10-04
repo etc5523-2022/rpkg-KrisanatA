@@ -12,6 +12,9 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 “dislib” or disease library is a package to provide information about
 the diseases and their mortality rate. The original data are from [Our
 world in Data](https://ourworldindata.org/what-does-the-world-die-from).
+The purpose for the app is to provide easier access to the mortality
+rate data and allow users to analyse the information based on their
+interest.
 
 You can access the package website through this
 [link](https://etc5523-2022.github.io/rpkg-KrisanatA/)
